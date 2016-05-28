@@ -1,0 +1,27 @@
+/* Chrome, Safari, Opera */
+@-webkit-keyframes example {
+    0%   {left:0%; top:20%;}
+    33%  {left:0%; top:50%;}
+    66%  {left:75%; top:50%;}
+    100% {left:75%; top:20%;}
+}
+
+/* Standard syntax */
+@keyframes example {
+    0%   {left:0%; top:20%;}
+    33%  {left:0%; top:50%;}
+    66%  {left:75%; top:50%;}
+    100% {left:75%; top:20%;}
+}
+@-webkit-keyframes test {
+    0%   {left:400px; top:200px;}
+    33%  {left:400px; top:100px;}
+    66%  {left:0px; top:100px;}
+    100% {left:0px; top:200px;}}
+
+/* Standard syntax */
+@keyframes test {
+    0%   {left:400px; top:200px;}
+    33%  {left:400px; top:100px;}
+    66%  {left:0px; top:100px;}
+    100% {left:0px; top:200px;}}

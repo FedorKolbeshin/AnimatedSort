@@ -1,0 +1,29 @@
+div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+
+}
+.first-animate {
+    -webkit-animation-name: example; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+    animation-name: example;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;  /* Chrome, Safari, Opera */
+    animation-fill-mode: forwards;
+}
+#second {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+}
+.second-animate{
+    -webkit-animation-name: test; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+    animation-name: test;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;  /* Chrome, Safari, Opera */
+    animation-fill-mode: forwards;
+}
