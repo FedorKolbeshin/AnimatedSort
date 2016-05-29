@@ -1,5 +1,27 @@
+
 /* Chrome, Safari, Opera */
-@-webkit-keyframes example {
+@-webkit-keyframes first-start-animate {
+    0%   {left:0%; top:20%;}
+    33%  {left:0%; top:50%;}
+    66%  {left:75%; top:50%;}
+    100% {left:75%; top:20%;}
+}
+
+@-moz-keyframes first-start-animate {
+    0%   {left:0%; top:20%;}
+    33%  {left:0%; top:50%;}
+    66%  {left:75%; top:50%;}
+    100% {left:75%; top:20%;}
+}
+
+@-o-keyframes first-start-animate {
+    0%   {left:0%; top:20%;}
+    33%  {left:0%; top:50%;}
+    66%  {left:75%; top:50%;}
+    100% {left:75%; top:20%;}
+}
+
+@-ms-keyframes first-start-animate {
     0%   {left:0%; top:20%;}
     33%  {left:0%; top:50%;}
     66%  {left:75%; top:50%;}
@@ -7,21 +29,68 @@
 }
 
 /* Standard syntax */
-@keyframes example {
+@keyframes first-start-animate {
     0%   {left:0%; top:20%;}
     33%  {left:0%; top:50%;}
     66%  {left:75%; top:50%;}
     100% {left:75%; top:20%;}
 }
-@-webkit-keyframes test {
-    0%   {left:400px; top:200px;}
-    33%  {left:400px; top:100px;}
-    66%  {left:0px; top:100px;}
-    100% {left:0px; top:200px;}}
+
+@-webkit-keyframes second-start-animate {
+    0%   {left:0%; top:20%;}
+    33%  {left:0%; top:50%;}
+    66%  {left:75%; top:50%;}
+    100% {left:75%; top:20%;}
+}
+
+@-moz-keyframes second-start-animate {
+    0%   {left:0%; top:20%;}
+    33%  {left:0%; top:50%;}
+    66%  {left:75%; top:50%;}
+    100% {left:75%; top:20%;}
+}
+
+@-o-keyframes second-start-animate {
+    0%   {left:0%; top:20%;}
+    33%  {left:0%; top:50%;}
+    66%  {left:75%; top:50%;}
+    100% {left:75%; top:20%;}
+}
+
+@-ms-keyframes second-start-animate {
+    0%   {left:0%; top:20%;}
+    33%  {left:0%; top:50%;}
+    66%  {left:75%; top:50%;}
+    100% {left:75%; top:20%;}
+}
 
 /* Standard syntax */
-@keyframes test {
-    0%   {left:400px; top:200px;}
-    33%  {left:400px; top:100px;}
-    66%  {left:0px; top:100px;}
-    100% {left:0px; top:200px;}}
+@keyframes second-start-animate {
+    0%   {left:0%; top:20%;}
+    33%  {left:0%; top:50%;}
+    66%  {left:75%; top:50%;}
+    100% {left:75%; top:20%;}
+}
+.first-animate {
+    -webkit-animation-name: first-start-animate; /* Chrome, Safari, Opera */
+    -moz-animation-name: first-start-animate;
+    -o-animation-name: first-start-animate;
+    -ms-animation-name:first-start-animate;
+    -webkit-animation-duration: 0.025s; /* Chrome, Safari, Opera */
+    animation-name: first-start-animate;
+    animation-duration: 0.025s;
+    -webkit-animation-fill-mode: forwards;  /* Chrome, Safari, Opera */
+    animation-fill-mode: forwards;
+}
+
+.second-animate{
+    -webkit-animation-name: second-start-animate; /* Chrome, Safari, Opera */
+    -moz-animation-name: second-start-animate;
+    -o-animation-name:second-start-animate;
+    -ms-animation-name:second-start-animate;
+    -webkit-animation-duration: 0.025s; /* Chrome, Safari, Opera */
+    animation-name: second-start-animate;
+    animation-duration: 0.025s;
+    -webkit-animation-fill-mode: forwards;  /* Chrome, Safari, Opera */
+    animation-fill-mode: forwards;
+}

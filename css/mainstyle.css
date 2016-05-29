@@ -1,29 +1,87 @@
-div {
-    width: 100px;
-    height: 100px;
-    background-color: red;
+input{
+    padding: 9px;
+    border: solid 1px #d5d5d5;
+    outline: 0;
+    font: 13px Verdana, Tahoma, sans-serif;
+    width: 100%;
+    background: #FFFFFF;
+    transition: all 0.5s;
+    top:100%;
+}
+input:focus{
+    box-shadow: rgba(0,0,0, 0.20) 0px 0px 8px;
+    -moz-box-shadow: rgba(0,0,0, 0.2) 0px 0px 8px;
+    -webkit-box-shadow: rgba(0,0,0, 0.2) 0px 0px 8px;
+    background-color:lightblue;
+    border-color:#b1b1b1;
+}
+label{
+    font: 14px Verdana, Tahoma, sans-serif;
+    color: #555555;
+    display: inline-block;
+    text-align: left;
+    top:100%;
+}
+#clickButton {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+#clickButton span {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    transition: 1s;
+}
+
+#clickButton span:after {
+    content: '>>';
     position: absolute;
+    opacity: 0;
+    right: 20px;
+    transition: 1s;
+}
+#clickButton:active {
+    transition:  0.1s;
+    background-color:green;
+}
+#clickButton:hover span {
+    padding-right: 25px;
+}
+
+#clickButton:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+div.number {
+    width:auto;
+    height: auto;
+    position: absolute;
+    background-color: aqua;
 
 }
-.first-animate {
-    -webkit-animation-name: example; /* Chrome, Safari, Opera */
-    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
-    animation-name: example;
-    animation-duration: 2s;
-    -webkit-animation-fill-mode: forwards;  /* Chrome, Safari, Opera */
-    animation-fill-mode: forwards;
-}
-#second {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    position: absolute;
-}
-.second-animate{
-    -webkit-animation-name: test; /* Chrome, Safari, Opera */
-    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
-    animation-name: test;
-    animation-duration: 2s;
-    -webkit-animation-fill-mode: forwards;  /* Chrome, Safari, Opera */
-    animation-fill-mode: forwards;
+.num{
+    color: white;
+    background: #2980B9;
+    display: block;
+    font-style: italic;
+    font-size:40px;
+    text-align: center;
+    vertical-align: middle;
+    padding-top:20px;
+    align-content: center;
+    min-width: 70px;
+    max-width: inherit;
+    min-height: 70px;
+    max-height: inherit;
 }
