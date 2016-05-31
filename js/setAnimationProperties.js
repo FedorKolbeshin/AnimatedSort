@@ -1,18 +1,18 @@
 /**
  * Created by fReDDy on 28.05.2016.
  */
-function SetAnimationProperties (ID,first,second){
+function SetAnimationProperties (ID,first,second,maxTop){
     var counter=0;
     while (counter!=4) {
         var keyframeRules = document.getElementById(ID).sheet.cssRules[counter].cssRules;
-        console.dir(document.getElementById(ID));
         if (counter>1)
         {
-            setCurrentRule(keyframeRules,first,second,"5%");
+            setCurrentRule(keyframeRules,first,second,"3%");
         }
         else
         {
-            setCurrentRule(keyframeRules,second,first,"55%");
+            setCurrentRule(keyframeRules,second,first,(maxTop+17)+"%");
+            console.log((maxTop+15)+"%");
         }
         counter++;
     }

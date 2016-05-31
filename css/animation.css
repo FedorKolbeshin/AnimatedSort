@@ -71,14 +71,15 @@
     66%  {left:75%; top:50%;}
     100% {left:75%; top:20%;}
 }
+
 .first-animate {
     -webkit-animation-name: first-start-animate; /* Chrome, Safari, Opera */
     -moz-animation-name: first-start-animate;
     -o-animation-name: first-start-animate;
     -ms-animation-name:first-start-animate;
-    -webkit-animation-duration: 0.025s; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 50ms; /* Chrome, Safari, Opera */
     animation-name: first-start-animate;
-    animation-duration: 0.025s;
+    animation-duration: 50ms;
     -webkit-animation-fill-mode: forwards;  /* Chrome, Safari, Opera */
     animation-fill-mode: forwards;
 }
@@ -88,9 +89,48 @@
     -moz-animation-name: second-start-animate;
     -o-animation-name:second-start-animate;
     -ms-animation-name:second-start-animate;
-    -webkit-animation-duration: 0.025s; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 50ms; /* Chrome, Safari, Opera */
     animation-name: second-start-animate;
-    animation-duration: 0.025s;
+    animation-duration: 50ms;
     -webkit-animation-fill-mode: forwards;  /* Chrome, Safari, Opera */
     animation-fill-mode: forwards;
+}
+@-webkit-keyframes divShadow {
+    from {opacity:0;}
+    to {opacity:0.70;}
+}
+.background {
+    background-color: #000; /* Чёрный фон */
+    height: 100%; /* Высота максимальна */
+    left: 0; /* Нулевой отступ слева */
+    position: fixed; /* Фиксированное положение */
+    top: 0; /* Нулевой отступ сверху */
+    width: 100%; /* Ширина максимальна */
+    z-index: 100; /* Заведомо быть НАД другими элементами */
+}
+.background-animate {
+    -webkit-animation-name: divShadow;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+}
+@-webkit-keyframes divShow {
+    from  {left:30%;top:-50%;opacity:0;}
+    to    {left:30%;top:10%;opacity:1;}
+}
+
+.popup {
+    border-radius:5px;
+    background-color: #fff;
+    height: 80%;
+    position: fixed;
+    opacity:0;
+    overflow-wrap: break-word;
+    overflow: auto;
+    z-index: 100;
+    width: 40%;
+}
+.popup-animate {
+    -webkit-animation-name: divShow;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
 }

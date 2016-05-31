@@ -1,3 +1,12 @@
+h1,h3{
+    color:red;
+}
+li img{
+    width: 97%;
+}
+p{
+    font-size: 20px;font-style: italic;
+}
 input{
     padding: 9px;
     border: solid 1px #d5d5d5;
@@ -5,7 +14,7 @@ input{
     font: 13px Verdana, Tahoma, sans-serif;
     width: 100%;
     background: #FFFFFF;
-    transition: all 0.5s;
+    transition: all 1.5s;
     top:100%;
 }
 input:focus{
@@ -22,7 +31,7 @@ label{
     text-align: left;
     top:100%;
 }
-#clickButton {
+button {
     display: inline-block;
     border-radius: 4px;
     background-color: #f4511e;
@@ -31,41 +40,41 @@ label{
     text-align: center;
     font-size: 28px;
     padding: 20px;
-    width: 200px;
+    width: 100%;
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
 }
 
-#clickButton span {
+button span {
     cursor: pointer;
     display: block;
     position: relative;
     transition: 1s;
 }
 
-#clickButton span:after {
+button span:after {
     content: '>>';
     position: absolute;
     opacity: 0;
     right: 20px;
     transition: 1s;
 }
-#clickButton:active {
+button:active {
     transition:  0.1s;
     background-color:green;
 }
-#clickButton:hover span {
-    padding-right: 25px;
+button:hover span {
+    padding-right: 40px;
 }
 
-#clickButton:hover span:after {
+button:hover span:after {
     opacity: 1;
     right: 0;
 }
 div.number {
-    width:auto;
-    height: auto;
+    width:100px;
+    height: 100px;
     position: absolute;
     background-color: aqua;
 
@@ -84,4 +93,12 @@ div.number {
     max-width: inherit;
     min-height: 70px;
     max-height: inherit;
+}
+.error{
+    opacity:1;
+    position:absolute;
+    background-color: red;
+    border-radius:5px;
+    display:block;
+    transition:all 1s;
 }
