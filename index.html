@@ -9,64 +9,72 @@
     <script src="js/logic.js"></script>
 </head>
 <body>
-    <div style="position: relative;margin-left:20%;margin-right: 20%;height:20%;min-height:20%;">
+    <div style="position: relative;margin-left:20%;margin-right: 20%;height:20%;">
         <div style="width:auto;height:50%;">
-        <div id="elementCountDiv" style="float:left;margin-left: 1%;margin-right: 1%;width:32%;height:100%;">
-            <label id="elementCountLabel" for="elementCount">Element Count- (min:2 ; max: 100)</label>
-            <input id="elementCount" type="text" value="element count">
-        </div>
-        <div id="appearSpeedDiv" style="float: left;margin-right: 1%;width:32%;height:100%;">
-            <label id="appearSpeedLabel" for="appearSpeed">Appear Animation Speed - min:10</label>
-            <input id="appearSpeed" type="text" value="appear speed">
-        </div>
-        <div id="swapSpeedDiv" style="float:right; margin-right: 1%;width:32%;height:100%;">
-            <label id="swapSpeedLabel" for="swapSpeed">Swap Animation Speed - min:100</label>
-            <input id="swapSpeed" type="text" value="swap speed">
-        </div>
+            <div class="dataField" id="elementCountDiv">
+                <label id="elementCountLabel" for="elementCount">Element Count- (min:2 ; max: 100)</label>
+                <input id="elementCount" type="text" value="element count">
+            </div>
+            <div class="dataField" id="appearSpeedDiv">
+                <label id="appearSpeedLabel" for="appearSpeed">Appear Animation Speed - min:10</label>
+                <input id="appearSpeed" type="text" value="appear speed">
+            </div>
+            <div class="dataField" id="swapSpeedDiv">
+                <label id="swapSpeedLabel" for="swapSpeed">Swap Animation Speed - min:100</label>
+                <input id="swapSpeed" type="text" value="swap speed">
+            </div>
         </div>
         <div style="width:auto;height:50%;clear:both;">
-        <div style="float:left;left:1%;width:30%;position: relative;">
-            <button id="button" ><span style="margin-right:5px;">Сгенерировать</span></button>
-        </div>
-        <div style="float:left;left:3%;width:30%;position: relative;">
-            <button id="help" ><span style="margin-right:5px;">Помощь</span></button>
-        </div>
-        <div style="float:left;left:5%;width:30%;position: relative;">
-            <button id="clickButton" disabled ><span style="margin-right:5px;">Старт</span></button>
-        </div>
+            <div class="buttons" style="left:1%;">
+                <button id="button" ><span>Сгенерировать</span></button>
+            </div>
+            <div class="buttons" style="left:3%;">
+                <button id="help" ><span>Помощь</span></button>
+            </div>
+            <div class="buttons" style="left:5%;">
+                <button id="clickButton" disabled ><span>Старт</span></button>
+            </div>
         </div>
     </div>
     <div style="margin-left:20%;margin-right:20%;height: 80%;">
-        <div id="container" style="border:2px solid midnightblue;border-radius:5px;position:relative;overflow-wrap:break-word;width:100%; height:100%;overflow:scroll; padding-bot:15px;background-color: aqua">
+        <div id="container"></div>
     </div>
-        <div class="background" id="check" style="display:none;"></div>
-        <div class="popup" id="helpDiv" style="display: none;">
-            <div style="height:84%;overflow: auto;">
+    <div class="background" id="check" style="display:none;"></div>
+    <div class="popup" id="helpDiv" style="display: none;">
+        <div style="height:84%;overflow: auto;">
             <center><h1>Инструкция</h1></center>
-                <ul>
-                    <li>
-                        <p>Прежде всего необходимо задать <b>количество элементов</b>, которые будут случайно сгенерированы (Element Count)
-                        , а также указать <b>скорость анимации</b> появления элементов (Appear Speed)</p>
-                        <img src="img/1.jpg">
-                    </li>
-                    <li>
-                        <p>После этого мы нажимаем на кнопку <b>"Сгенерировать"</b>, чтобы появились наши числа"</p>
-                        <h3>Важно!</h3>
-                        <p>При неправильном указании значений будет следующий эффект:</p>
-                        <img src="img/2.jpg">
-                    </li>
-                    <li>
-                        <p>После этого нам остается указать скорость анимации, с которой будет показана сортировка элементов и нажать на кнопку <b>"Старт"</b></p>
-                        <h3>Примечание</h3>
-                        <p>Здесь также необходимо указать правильное значение!</p>
-                        <img src="img/3.jpg">
-                    </li>
-                    <li>
-                        <p>Вот и всё! Делее просто наблюдаем за происходящим</p>
-                    </li>
-                </ul>
-            </div>
-            <div style="margin-left:25%;margin-right:25%;margin-top:2%;width:50%;"><button id="closeHelp" style="width:100%;"><span style="margin-right:5px;">Ok</span></button>
+            <ul>
+                <li>
+                    <p>Прежде всего необходимо задать <b>количество элементов</b>, которые будут случайно сгенерированы (Element Count),
+                        а также указать <b>скорость анимации</b> появления элементов (Appear Speed)</p>
+                    <img src="img/1.jpg">
+                </li>
+                <li>
+                    <p>После этого мы нажимаем на кнопку <b>"Сгенерировать"</b>, чтобы появились наши числа"</p>
+                    <h3>Важно!</h3>
+                    <p>При неправильном указании значений будет следующий эффект:</p>
+                    <img src="img/2.jpg">
+                </li>
+                <li>
+                    <p>После этого нам остается указать скорость анимации, с которой будет показана сортировка элементов и нажать на кнопку <b>"Старт"</b></p>
+                    <h3>Примечание</h3>
+                    <p>Здесь также необходимо указать правильное значение!</p>
+                    <img src="img/3.jpg">
+                </li>
+                <li>
+                    <p>Вот и всё! Делее просто наблюдаем за происходящим</p>
+                </li>
+            </ul>
+            <center><h1 style="color:red;">Внимание!</h1></center>
+            <p>В различных браузерах могут быть проблемы с анимацией во время свапа, рекомендуется использовать следующие минимальные значения скорости:</p>
+            <ul>
+                <li><p>Google Chrome, Opera, Safari: 50</p></li>
+                <li><p>Mozilla Firefox, Internet Explorer(10+): 110</p></li>
+            </ul>
         </div>
+        <div style="margin-left:25%;margin-right:25%;margin-top:2%;width:50%;height: 12%;">
+            <button id="closeHelp" style="width:100%;height:100%;"><span>Ok</span></button>
+        </div>
+    </div>
 </body>
 </html>

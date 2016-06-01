@@ -96,6 +96,14 @@
     animation-fill-mode: forwards;
 }
 @-webkit-keyframes divShadow {
+     from {opacity:0;}
+     to {opacity:0.70;}
+}
+@-ms-keyframes divShadow {
+    from {opacity:0;}
+    to {opacity:0.70;}
+}
+@-moz-keyframes divShadow {
     from {opacity:0;}
     to {opacity:0.70;}
 }
@@ -112,12 +120,25 @@
     -webkit-animation-name: divShadow;
     -webkit-animation-duration: 1s;
     -webkit-animation-fill-mode: forwards;
+    -moz-animation-name: divShadow;
+    -moz-animation-duration: 1s;
+    -moz-animation-fill-mode: forwards;
+    -ms-animation-name: divShadow;
+    -ms-animation-duration: 1s;
+    -ms-animation-fill-mode: forwards;
 }
 @-webkit-keyframes divShow {
     from  {left:30%;top:-50%;opacity:0;}
     to    {left:30%;top:10%;opacity:1;}
 }
-
+@-ms-keyframes divShow {
+    from  {left:30%;top:-50%;opacity:0;}
+    to    {left:30%;top:10%;opacity:1;}
+}
+@-moz-keyframes divShow {
+    from  {left:30%;top:-50%;opacity:0;}
+    to    {left:30%;top:10%;opacity:1;}
+}
 .popup {
     border-radius:5px;
     background-color: #fff;
@@ -133,4 +154,10 @@
     -webkit-animation-name: divShow;
     -webkit-animation-duration: 1s;
     -webkit-animation-fill-mode: forwards;
+    -moz-animation-name: divShow;
+    -moz-animation-duration: 1s;
+    -moz-animation-fill-mode: forwards;
+    -ms-animation-name: divShow;
+    -ms-animation-duration: 1s;
+    -ms-animation-fill-mode: forwards;
 }

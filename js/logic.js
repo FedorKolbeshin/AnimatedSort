@@ -61,13 +61,20 @@ document.addEventListener("DOMContentLoaded",function()
     }
     [].forEach.call(document.getElementsByTagName("input"),function(item){
         item.addEventListener("keypress",function(event){
-            console.dir(event);
-            console.log(String.fromCharCode(event.which))
-            var regExp=/[digit]?[numpad]?\d/;
-            if (!regExp.test(event.code))
+            var isGood=false;
+            console.log()
+            var mozillaRegExp=/^key[\w]+$/i;
+            console.log();
+            if (!/^\d$/.test(String.fromCharCode(event.which)) && !event.ctrlKey)
             {
-                event.preventDefault();
-                return;
+                if (/Firefox/i.test(navigator.userAgent) && /backspace/i.test(event.code))
+                {
+                    console.log("adasdasd");
+                    return;
+                }
+                else
+                {event.preventDefault();
+                return;}
             }
             item.style.backgroundColor="";
         });

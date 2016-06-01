@@ -34,7 +34,7 @@ function checkGenerateNumberParameters(){
 function setSwapAnimationSpeed() {
     var rules = document.getElementById("keyframes").sheet.cssRules,
         timeout = +document.getElementById("swapSpeed").value;
-    if (timeout<100 || isNaN(timeout))
+    if (timeout<50 || isNaN(timeout))
     {
         return -1;
     }
@@ -67,21 +67,29 @@ function createElement(div,id,value,currentSize,speed) {
             @-ms-keyframes appear" + id + " {\
             0%   {opacity:0;top:0%;left:0%;}\
             100% {opacity:1;top:" + currentSize.top + "%;left:" + currentSize.width + "%;}\
-    }\
+            }\
+            @-moz-keyframes appear" + id + " {\
+            0%   {opacity:0;top:0%;left:0%;}\
+            100% {opacity:1;top:" + currentSize.top + "%;left:" + currentSize.width + "%;}\
+            }\
         .appear" + id + "{\
         -webkit-animation-name: appear" + id + ";\
         -webkit-animation-duration: 1s;\
+        -webkit-animation-fill-mode: forwards;\
+        -webkit-animation-delay:" + id * speed + "s;\
         -ms-animation-name:appear" + id + ";\
         -ms-animation-duration: 1s;\
         -ms-animation-fill-mode: forwards;\
         -ms-animation-delay:" + id * speed + "s;\
-        -webkit-animation-fill-mode: forwards;\
-        -webkit-animation-delay:" + id * speed + "s;\
+        -moz-animation-name:appear" + id + ";\
+        -moz-animation-duration: 1s;\
+        -moz-animation-fill-mode: forwards;\
+        -moz-animation-delay:" + id * speed + "s;\
         }";
     element.style.top = currentSize.top + "%";
     element.style.left = currentSize.width + "%";
     element.classList.add("appear" + id);
-    span.className = "num";
+    span.className = "numberSpan";
     span.innerHTML = value;
     element.appendChild(span);
     div.appendChild(element);
