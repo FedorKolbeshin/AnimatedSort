@@ -1,15 +1,19 @@
 span{
     margin-right:5px;
 }
+
 h1,h3{
     color:red;
 }
+
 li img{
     width: 97%;
 }
+
 p{
     font-size: 20px;font-style: italic;
 }
+
 input{
     padding: 9px;
     border: solid 1px #d5d5d5;
@@ -20,6 +24,7 @@ input{
     transition: all 1.5s;
     top:100%;
 }
+
 input:focus{
     box-shadow: rgba(0,0,0, 0.20) 0px 0px 8px;
     -moz-box-shadow: rgba(0,0,0, 0.2) 0px 0px 8px;
@@ -27,6 +32,7 @@ input:focus{
     background-color:lightblue;
     border-color:#b1b1b1;
 }
+
 label{
     font: 14px Verdana, Tahoma, sans-serif;
     color: #555555;
@@ -34,6 +40,7 @@ label{
     text-align: left;
     top:100%;
 }
+
 button {
     display: inline-block;
     border-radius: 4px;
@@ -63,10 +70,12 @@ button span:after {
     right: 20px;
     transition: 1s;
 }
+
 button:active {
     transition:  0.1s;
     background-color:green;
 }
+
 button:hover span {
     padding-right: 40px;
 }
@@ -75,6 +84,7 @@ button:hover span:after {
     opacity: 1;
     right: 0;
 }
+
 div.number {
     width:100px;
     height: 100px;
@@ -82,6 +92,7 @@ div.number {
     background-color: aqua;
 
 }
+
 .numberSpan{
     color: white;
     background: #2980B9;
@@ -89,7 +100,6 @@ div.number {
     font-style: italic;
     font-size:40px;
     text-align: center;
-    vertical-align: middle;
     padding-top:20px;
     align-content: center;
     min-width: 70px;
@@ -97,14 +107,7 @@ div.number {
     min-height: 70px;
     max-height: inherit;
 }
-.error{
-    opacity:1;
-    position:absolute;
-    background-color: red;
-    border-radius:5px;
-    display:block;
-    transition:all 1s;
-}
+
 #container {
     border: 2px solid midnightblue;
     border-radius: 5px;
@@ -115,15 +118,39 @@ div.number {
     padding-bot: 15px;
     background-color: aqua;
 }
+
 .buttons{
     float:left;
     width:30%;
     position: relative;
 }
+
 .dataField{
     float:left;
     margin-left: 1%;
     margin-right: 1%;
     width:31%;
     height:100%;
+}
+
+.backgroundDiv {
+    background-color: #000;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.helpDiv {
+    border-radius:5px;
+    background-color: #fff;
+    height: 80%;
+    position: fixed;
+    opacity:0;
+    overflow-wrap: break-word;
+    overflow: auto;
+    z-index: 100;
+    width: 40%;
 }

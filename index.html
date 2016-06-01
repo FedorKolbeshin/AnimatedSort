@@ -6,9 +6,11 @@
     <link type="text/css" rel="stylesheet" href="css/mainstyle.css">
     <script src="js/setAnimationProperties.js"></script>
     <script src="js/generateFunctions.js"></script>
-    <script src="js/logic.js"></script>
+    <script src="js/currentSize.js"></script>
+    <script src="js/handlers.js"></script>
 </head>
 <body>
+
     <div style="position: relative;margin-left:20%;margin-right: 20%;height:20%;">
         <div style="width:auto;height:50%;">
             <div class="dataField" id="elementCountDiv">
@@ -16,31 +18,35 @@
                 <input id="elementCount" type="text" value="element count">
             </div>
             <div class="dataField" id="appearSpeedDiv">
-                <label id="appearSpeedLabel" for="appearSpeed">Appear Animation Speed - min:10</label>
+                <label id="appearSpeedLabel" for="appearSpeed">Appear Animation Speed ( ms ) - min:10</label>
                 <input id="appearSpeed" type="text" value="appear speed">
             </div>
             <div class="dataField" id="swapSpeedDiv">
-                <label id="swapSpeedLabel" for="swapSpeed">Swap Animation Speed - min:100</label>
+                <label id="swapSpeedLabel" for="swapSpeed">Swap Animation Speed( ms ) - min:50</label>
                 <input id="swapSpeed" type="text" value="swap speed">
             </div>
         </div>
         <div style="width:auto;height:50%;clear:both;">
             <div class="buttons" style="left:1%;">
-                <button id="button" ><span>Сгенерировать</span></button>
+                <button id="generateButton" ><span>Сгенерировать</span></button>
             </div>
             <div class="buttons" style="left:3%;">
-                <button id="help" ><span>Помощь</span></button>
+                <button id="helpButton" ><span>Помощь</span></button>
             </div>
             <div class="buttons" style="left:5%;">
-                <button id="clickButton" disabled ><span>Старт</span></button>
+                <button id="startButton" disabled ><span>Старт</span></button>
             </div>
         </div>
     </div>
+
+
     <div style="margin-left:20%;margin-right:20%;height: 80%;">
         <div id="container"></div>
     </div>
-    <div class="background" id="check" style="display:none;"></div>
-    <div class="popup" id="helpDiv" style="display: none;">
+
+
+    <div class="backgroundDiv" id="helpShadow" style="display:none;"></div>
+    <div class="helpDiv" id="helpDiv" style="display: none;">
         <div style="height:84%;overflow: auto;">
             <center><h1>Инструкция</h1></center>
             <ul>
@@ -73,7 +79,7 @@
             </ul>
         </div>
         <div style="margin-left:25%;margin-right:25%;margin-top:2%;width:50%;height: 12%;">
-            <button id="closeHelp" style="width:100%;height:100%;"><span>Ok</span></button>
+            <button id="closeHelpButton" style="width:100%;height:100%;"><span>Ok</span></button>
         </div>
     </div>
 </body>

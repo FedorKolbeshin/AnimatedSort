@@ -1,27 +1,38 @@
 /**
  * Created by fReDDy on 29.05.2016.
  */
+
+/*генерируем массив случайных чисел, и вставляем
+каждый элемент в наш div-контейнер для отображения
+ */
 function generateMassive (currentSize,speed){
-    var div=document.getElementById("container");
-    var count=+document.getElementById("elementCount").value;
+    var
+        div=document.getElementById("container"),
+        count=+document.getElementById("elementCount").value;
     for (var i=0;i<count;i++)
     {
         var randomNumber= getRandomNumber(1,100);
         createElement(div,i,randomNumber,currentSize,speed);
     }
 }
+
+//генерируем рандомное число
 function getRandomNumber(min, max) {
     return Math.round(Math.random() * (max - min) + min);
 }
+
+/*проверяем введенные пользователем параметры количества элементов и скорости анимации
+появления элементов и в случае провала подсвечиваем красным данные поля
+  */
 function checkGenerateNumberParameters(){
-    var countElement=document.getElementById("elementCountDiv"),
+    var
+        countElement=document.getElementById("elementCountDiv"),
         appearElement=document.getElementById("appearSpeedDiv"),
         regExp=/^[1-9]+[0]*[1-9]*$/;
-    console.dir(countElement);
-    console.dir(appearElement);
+
     if (!regExp.test(countElement.children[1].value)||
         !regExp.test(appearElement.children[1].value)||
-        +countElement.children[1].value<=1 && +countElement.children[1].value>100 ||
+        +countElement.children[1].value<2 || +countElement.children[1].value>100 ||
         +appearElement.children[1].value<10) {
         countElement.children[1].style.backgroundColor="rgba(255,0,0,0.5)";
         appearElement.children[1].style.backgroundColor="rgba(255,0,0,0.5)";
@@ -31,32 +42,22 @@ function checkGenerateNumberParameters(){
     appearElement.children[1].style.backgroundColor="";
     return true;
 }
-function setSwapAnimationSpeed() {
-    var rules = document.getElementById("keyframes").sheet.cssRules,
-        timeout = +document.getElementById("swapSpeed").value;
-    if (timeout<50 || isNaN(timeout))
-    {
-        return -1;
-    }
-    else {
-        rules[4].style.animationDuration = timeout + "ms";
-        rules[5].style.animationDuration = timeout + "ms";
-        return timeout + timeout / 2;
-    }
-}
+
+/*
+Создаем наше число, генерируем для него анимацию, и вставляем его в наш контейнер
+ */
 function createElement(div,id,value,currentSize,speed) {
-    console.log(speed+"бугага");
-    var element = document.createElement("div"),
-        span = document.createElement("span");
-    element.id = id;
-    element.style.opacity = 0;
-    element.className = "number";
+    var
+        element = document.createElement("div"),
+        span = document.createElement("span"),
+        style = document.getElementById("style");
+
     if (currentSize.width > 90) {
         currentSize.width = 2;
         currentSize.top = currentSize.top + 20;
 
     }
-    var style = document.getElementById("style");
+
     if (id == 0) {
         style.innerHTML = "";
     }
@@ -86,6 +87,9 @@ function createElement(div,id,value,currentSize,speed) {
         -moz-animation-fill-mode: forwards;\
         -moz-animation-delay:" + id * speed + "s;\
         }";
+    element.id = id;
+    element.style.opacity = 0;
+    element.className = "number";
     element.style.top = currentSize.top + "%";
     element.style.left = currentSize.width + "%";
     element.classList.add("appear" + id);
